@@ -33,7 +33,10 @@ describe(@"IGSignatureRequest", ^{
             
             NSString* stringToSign = @"POST\n/some/path\nauth_key=key&auth_timestamp=1234&auth_version=1.0&go=here&query=params";
             expect([request stringToSign]).to.equal(stringToSign);
-
+            
+            NSMutableDictionary* queryParams = [NSMutableDictionary dictionaryWithDictionary:[request auth]];
+            [queryParams addEntriesFromDictionary:[request query]];
+            
             NSDictionary* authKeys = [request auth];
             expect(authKeys[@"auth_version"]).to.equal(@"1.0");
             expect(authKeys[@"auth_key"]).to.equal(@"key");
