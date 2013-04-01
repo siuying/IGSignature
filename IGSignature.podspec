@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.platform = :ios, '5.0'
   s.source_files = 'IGSignature/Signature/*.{m,h}'
+  s.dependency 'IGDigest', '~> 1.1.0'
 end
