@@ -59,11 +59,40 @@ describe(@"IGSignatureRequest", ^{
             expect(authKeys[@"auth_signature"]).to.equal(signature);
         });
         
-        pending(@"should generate correct string when query hash contains array");
-        pending(@"should not escape keys or values in the query string");
-        pending(@"should use the path to generate signature");
-        pending(@"should use the query string keys to generate signature");
-        pending(@"should use the query string values to generate signature");
+        it(@"should generate correct string when query hash contains array", ^{
+            NSDictionary* query = @{@"things": @[@"thing1", @"thing2"]};
+            request.query = query;
+
+            NSString* stringToSign = @"POST\n/some/path\nthings[]=thing1&things[]=thing2";
+            expect([request stringToSign]).to.equal(stringToSign);
+        });
+
+        it(@"should not escape keys or values in the query string", ^{
+            NSDictionary* query = @{@"key;": @"value@"};
+            request.query = query;
+            [request sign:token withTime:time];
+            expect([request stringToSign]).toNot.equal(signature);
+        });
+
+        it(@"should use the path to generate signature", ^{
+            request.path = @"/some/other/path";
+            [request sign:token withTime:time];
+            expect([[request auth] objectForKey:@"auth_signature"]).toNot.equal(signature);
+        });
+
+        it(@"should use the query string keys to generate signature", ^{
+            NSDictionary* query = @{@"other": @"query"};
+            request.query = query;
+            [request sign:token withTime:time];
+            expect([[request auth] objectForKey:@"auth_signature"]).toNot.equal(signature);
+        });
+
+        it(@"should use the query string values to generate signature", ^{
+            NSDictionary* query = @{@"key": @"notfoo", @"other": @"bar"};
+            request.query = query;
+            [request sign:token withTime:time];
+            expect([[request auth] objectForKey:@"auth_signature"]).toNot.equal(signature);
+        });
     });
 });
 
