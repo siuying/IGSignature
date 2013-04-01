@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+    <TOC>
+        <Node type="folder">
+            <Name>IGDigest 1.1.0</Name>
+            <Path>index.html</Path>
+			<Subnodes>
+                
+				
+				
+				<Node type="folder">
+					<Name>Categories</Name>
+					<Path>index.html</Path>
+					<Subnodes>
+						<NodeRef refid="1"/>
+						<NodeRef refid="2"/>
+						<NodeRef refid="3"/>
+						<NodeRef refid="4"/>
+						<NodeRef refid="5"/>
+						<NodeRef refid="6"/>
+						
+					</Subnodes>
+				</Node>
+				
+				
+			</Subnodes>
+        </Node>
+    </TOC>
+	<Library>
+		
+		
+		<Node id="1">
+			<Name>NSData(MD5Digest)</Name>
+			<Path>Categories/NSData+MD5Digest.html</Path>
+		</Node>
+		<Node id="2">
+			<Name>NSData(SHA1Digest)</Name>
+			<Path>Categories/NSData+SHA1Digest.html</Path>
+		</Node>
+		<Node id="3">
+			<Name>NSData(SHA256Digest)</Name>
+			<Path>Categories/NSData+SHA256Digest.html</Path>
+		</Node>
+		<Node id="4">
+			<Name>NSString(MD5Digest)</Name>
+			<Path>Categories/NSString+MD5Digest.html</Path>
+		</Node>
+		<Node id="5">
+			<Name>NSString(SHA1Digest)</Name>
+			<Path>Categories/NSString+SHA1Digest.html</Path>
+		</Node>
+		<Node id="6">
+			<Name>NSString(SHA256Digest)</Name>
+			<Path>Categories/NSString+SHA256Digest.html</Path>
+		</Node>
+		
+		
+	</Library>
+</DocSetNodes>

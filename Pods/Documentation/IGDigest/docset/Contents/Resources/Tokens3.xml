@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Categories/NSData+SHA256Digest.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cat/NSData(SHA256Digest)</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSData+SHA256Digest.h</DeclaredIn>
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SHA256Digest)/SHA256Digest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSData+SHA256Digest.h</DeclaredIn>			
+			
+			<Declaration>+ (NSData *)SHA256Digest:(NSData *)input</Declaration>
+			
+			
+			<Anchor>//api/name/SHA256Digest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SHA256Digest)/SHA256Digest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSData+SHA256Digest.h</DeclaredIn>			
+			
+			<Declaration>- (NSData *)SHA256Digest</Declaration>
+			
+			
+			<Anchor>//api/name/SHA256Digest</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SHA256Digest)/SHA256HexDigest:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSData+SHA256Digest.h</DeclaredIn>			
+			
+			<Declaration>+ (NSString *)SHA256HexDigest:(NSData *)input</Declaration>
+			
+			
+			<Anchor>//api/name/SHA256HexDigest:</Anchor>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/NSData(SHA256Digest)/SHA256HexDigest</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>NSData+SHA256Digest.h</DeclaredIn>			
+			
+			<Declaration>- (NSString *)SHA256HexDigest</Declaration>
+			
+			
+			<Anchor>//api/name/SHA256HexDigest</Anchor>
+		</Token>
+		
+	</File>
+</Tokens>
