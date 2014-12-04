@@ -8,11 +8,16 @@ SpecBegin(IGQueryEncoder)
 
 describe(@"IGQueryEncoder", ^{
     describe(@"encodeParamWithoutEscapingUsingKey:andValue:", ^{
-        expect([IGQueryEncoder encodeParamWithoutEscapingUsingKey:@"query"
-                                                         andValue:@"params"]).to.equal(@"query=params");
-
-        expect([IGQueryEncoder encodeParamWithoutEscapingUsingKey:@"query"
-                                                         andValue:(@[@"1", @"2"])]).to.equal(@"query[]=1&query[]=2");
+        it(@"encode array", ^{
+            expect([IGQueryEncoder encodeParamWithoutEscapingUsingKey:@"query"
+                                                             andValue:@"params"]).to.equal(@"query=params");
+            
+            expect([IGQueryEncoder encodeParamWithoutEscapingUsingKey:@"query"
+                                                             andValue:(@[@"1", @"2"])]).to.equal(@"query[]=1&query[]=2");
+            
+            expect([IGQueryEncoder encodeParamWithoutEscapingUsingKey:@"query"
+                                                             andValue:(@[@"2", @"1"])]).to.equal(@"query[]=2&query[]=1");
+        });
     });
 });
 
